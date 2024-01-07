@@ -8,5 +8,12 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.menu__wrapper').removeClass('active');
             $('body').css('overflow', 'visible');
         });
-    })
+        window.addEventListener('scroll', function () {
+            if (this.scrollY > 300) {
+                $('.general__navbar').addClass('fixed');
+            } else {
+                $('.general__navbar').removeClass('fixed');
+            }
+        });
+    });
 });

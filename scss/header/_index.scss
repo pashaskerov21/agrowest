@@ -140,6 +140,10 @@ header {
         left: 0;
         width: 100%;
         z-index: 1000;
+        &.fixed{
+            position: fixed;
+            background-color: $black-9;
+        }
 
         .gn__inner {
             width: 100%;
