@@ -75,30 +75,6 @@ header {
                             line-height: 30px;
                         }
                     }
-
-                    .bs__button {
-                        @include row-center;
-                        width: 100%;
-                        max-width: 180px;
-                        min-height: 40px;
-                        font-size: 14px;
-                        border-radius: 10px;
-                        background-color: $primary-color;
-                        color: #ffffff;
-                        font-style: normal;
-                        letter-spacing: 1.6px;
-                        font-weight: 500;
-
-                        @media (width >=768px) {
-                            max-width: 230px;
-                            min-height: 56px;
-                            font-size: 16px;
-                        }
-
-                        &:hover {
-                            animation: $pulse-primary;
-                        }
-                    }
                 }
             }
 

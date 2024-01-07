@@ -1,0 +1,101 @@
+.about__row {
+    width: 100%;
+    @include column-center;
+    gap: 40px;
+
+    @media (width >=992px) {
+        @include row-between;
+        align-items: stretch;
+    }
+
+    .about__image {
+        width: 100%;
+        max-width: 560px;
+        @include row-center;
+        img{
+            width: 100%;
+            height: auto;
+            max-height: 480px;
+            object-fit: contain;
+        }
+        &.secondary {
+            @include row-between;
+            gap: 15px;
+            padding: 20px 0;
+            img {
+                width: 46%;
+                height: auto;
+                max-width: 270px;
+                max-height: 430px;
+                object-fit: contain;
+                border-radius: 10px;
+    
+                @media (width >=768px) {
+                    width: 50%;
+                    height: 98%;
+                }
+    
+                &:nth-child(1) {
+                    transform: translateY(-20px);
+                }
+    
+                &:nth-child(2) {
+                    transform: translateY(20px);
+                }
+            }
+        }
+    }
+
+    .about__content {
+        width: 100%;
+        max-width: 560px;
+        @include column-start;
+        gap: 20px;
+
+        @media (width >=992px) {
+            padding: 30px 0;
+        }
+
+        .content__title {
+            width: 100%;
+            color: $text-color;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            font-size: 20px;
+            letter-spacing: 1.4px;
+
+            @media (width >=768px) {
+                font-size: $title-size;
+                letter-spacing: 2.4px;
+            }
+        }
+
+        .content__sub-title {
+            width: 100%;
+            border-left: 3px solid $primary-color;
+            padding-left: 20px;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1.6px;
+
+            @media (width >=768px) {
+                font-size: 16px;
+            }
+        }
+
+        .content__text {
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 30px;
+            letter-spacing: 1.6px;
+
+            @media (width >=768px) {
+                font-size: 16px;
+            }
+        }
+    }
+}

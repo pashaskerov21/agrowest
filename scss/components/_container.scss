@@ -4,8 +4,7 @@
     $width-md: 720px;
     $width-lg: 960px;
     $width-xl: 1140px;
-    $width-xxl: 1320px;
-    $width-2xxl: 1500px;
+    $width-xxl: 1170px;
 
     width: 100%;
     margin: 0 auto;
@@ -26,8 +25,5 @@
     }
     @media (min-width: 1400px){
         max-width: $width-xxl;
-    }
-    @media (min-width: 1600px){
-        max-width: $width-2xxl;
     }
 }
