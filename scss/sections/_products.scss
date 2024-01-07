@@ -1,0 +1,8 @@
+.products-swiper{
+    padding-bottom: 40px;
+    .swiper-pagination{
+        &-bullet{
+            background-color: $primary-color;
+        }
+    }
+}

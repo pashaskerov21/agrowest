@@ -79,5 +79,8 @@ main{
 .swiper{
     width: 100%;
     z-index: 0;
+    .swiper-slide{
+        @include row-center;
+    }
 }
 
