@@ -78,6 +78,7 @@ header {
             }
 
             .swiper-pagination {
+                bottom: 20px;
                 @media (width >=768px) {
                     bottom: 40px;
                 }
