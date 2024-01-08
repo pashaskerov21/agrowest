@@ -1,8 +1,146 @@
-.products-swiper{
+.products-swiper {
     padding-bottom: 40px;
-    .swiper-pagination{
-        &-bullet{
+
+    .swiper-pagination {
+        &-bullet {
             background-color: $primary-color;
+        }
+    }
+}
+
+.products__section.general {
+    
+    .ps__inner {
+        width: 100%;
+        @include column-center;
+        gap: 40px;
+
+        @media (width > 992px) {
+            @include row-between;
+            align-items: stretch;
+        }
+
+        .ps__left {
+            width: 100%;
+
+            @media (width > 992px) {
+                max-width: 230px;
+            }
+            .filter__toggle{
+                margin-bottom: 20px;
+                @media (width >= 992px){
+                    display: none;
+                }
+            }
+        }
+
+        .ps__right {
+            width: 100%;
+        }
+
+        .product__filters {
+            width: 100%;
+            @include column-justify-start;
+            gap: 20px;
+            display: none;
+            @media (width >= 992px){
+                display: flex;
+            }
+            .filter__collapse {
+                width: 100%;
+                @include column-center;
+                border: 1px solid #F4F4F4;
+                border-radius: 10px;
+                .fc__button {
+                    width: 100%;
+                    @include row-between;
+                    background-color: #F4F4F4;
+                    min-height: 45px;
+                    padding: 0 15px;
+                    border-radius: 10px;
+                    cursor: pointer;
+                    span {
+                        color: $text-color;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: normal;
+                    }
+                    button{
+                        color: $primary-color;
+                        transition: all 0.3s;
+                    }
+                }
+                &.collapsed{
+                    .fc__button{
+                        button{
+                            transform: rotate(-180deg);
+                        }
+                    }
+                }
+            }
+            .fc__content{
+                width: 100%;
+                padding: 12px 15px;
+                .fc__checkboxs{
+                    width: 100%;
+                    @include column-center;
+                    gap: 10px;
+                    .check__item{
+                        width: 100%;
+                        @include row-justify-start;
+                        gap: 10px;
+                        input{
+                            appearance: none;
+                            -webkit-appearance: none;
+                            -moz-appearance: none;
+                            width: 18px;
+                            height: 18px;
+                            border: 1px solid $primary-color;
+                            border-radius: 5px;                         
+                            background-repeat: no-repeat;
+                            background-size: 0;
+                            transition: all 0.3s;
+                            background-position: top 1px left 1px;
+                            &:checked{
+                                background-size: 18px;
+                                background-color: $primary-color;
+                            }
+                        }
+                        label{
+                            color: $text-color;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: normal;
+                        }
+                    }
+                }
+            }
+            .filter__confirm{
+                width: 100%;
+                @include row-justify-end;
+                gap: 15px;
+                button{
+                    cursor: pointer;
+                }
+                .primary__button{
+                    max-width: 120px;
+                }
+            }
+        }
+        .products__grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 40px;
+            place-items: center;
+            @media (width >= 576px){
+                grid-template-columns: repeat(2,1fr);
+            }
+            @media (width >= 1200px){
+                grid-template-columns: repeat(3,1fr);
+            }
         }
     }
 }

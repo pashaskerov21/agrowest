@@ -128,12 +128,18 @@ header {
 
             .logo {
                 display: block;
-                width: 100px;
-                height: 100px;
+                width: 150px;
+                height: 75px;
 
+                @media (width >=576px) {
+                    width: 200px;
+                }
                 @media (width >=768px) {
-                    width: 150px;
-                    height: 150px;
+                    width: 250px;
+                    height: 100px;
+                }
+                @media (width >=1200px) {
+                    width: 300px;    
                 }
 
                 img {

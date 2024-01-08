@@ -15,5 +15,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 $('.general__navbar').removeClass('fixed');
             }
         });
+
+        $('.filter__toggle').click(function(){
+            $('.product__filters').slideToggle();
+        });
+
+        $('.filter__collapse .fc__button').click(function(){
+            $(this).parent('.filter__collapse').toggleClass('collapsed');
+            $(this).parent('.filter__collapse').find('.fc__content').slideToggle();
+        })
     });
 });
