@@ -75,6 +75,9 @@ input {
 main{
     width: 100%;
     min-height: 60vh;
+    @media (width >= 1200px){
+        background: var(--d-1) no-repeat top 100px right, var(--d-2) no-repeat bottom 100px left;
+    }
 }
 .swiper{
     width: 100%;

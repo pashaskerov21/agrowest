@@ -1,0 +1,30 @@
+.mission__content {
+    width: 100%;
+    @include column-center;
+    gap: 40px;
+
+    .mission__image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    .mission__text {
+        width: 100%;
+        text-align: center;
+        color: $text-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 1.6px;
+        @media (width >= 576px){
+            font-size: $text-size;
+            line-height: 30px;
+        }
+    }
+}

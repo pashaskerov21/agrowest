@@ -1,0 +1,32 @@
+.form__check{
+    width: 100%;
+    @include row-justify-start;
+    gap: 10px;
+    cursor: pointer;
+    input{
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        width: 18px;
+        height: 18px;
+        border: 1px solid $primary-color;
+        border-radius: 5px;  
+        background-image: var(--i);                       
+        background-repeat: no-repeat;
+        background-size: 0;
+        transition: all 0.3s;
+        background-position: top 1px left 1px;
+        &:checked{
+            background-size: 18px;
+            background-color: $primary-color;
+        }
+    }
+    label{
+        color: $text-color;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        cursor: pointer;
+    }
+}

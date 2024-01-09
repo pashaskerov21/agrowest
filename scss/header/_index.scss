@@ -150,16 +150,20 @@ header {
             }
 
             .menu__button {
-                width: 65px;
-                height: 65px;
+                width: 50px;
+                height: 50px;
                 border-radius: 50%;
                 background-color: #D9D9D940;
                 @include column-align-end;
-                padding: 15px 15px;
+                padding: 10px;
                 gap: 6px;
                 cursor: pointer;
                 transition: all 0.3s;
-
+                @media (width >= 576px){
+                    width: 65px;
+                    height: 65px;
+                    padding: 15px;
+                }
                 &:hover {
                     background-color: $primary-color;
                 }
@@ -170,9 +174,12 @@ header {
 
                 .mb__line {
                     width: 100%;
-                    height: 4px;
+                    height: 2px;
                     border-radius: 10px;
                     background-color: #EDF7DD;
+                    @media (width >= 576px){
+                        height: 4px;
+                    }
 
                     &:nth-child(1) {
                         width: 80%;
