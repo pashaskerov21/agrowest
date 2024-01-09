@@ -1,6 +1,8 @@
 .products-swiper {
     padding-bottom: 40px;
-
+    .swiper-slide{
+        padding: 5px;
+    }
     .swiper-pagination {
         &-bullet {
             background-color: $primary-color;
@@ -8,7 +10,7 @@
     }
 }
 
-.products__section.general {
+.products__section-general {
     
     .ps__inner {
         width: 100%;

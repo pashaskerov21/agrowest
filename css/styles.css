@@ -279,15 +279,14 @@ main {
   }
 }
 .section__heading .sh__title {
-  width: 100%;
   min-height: 120px;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: start;
+  text-align: center;
   background-repeat: no-repeat;
-  background-position: center left;
+  background-position: center;
   background-size: contain;
   padding: 10px 15px;
   font-size: 20px;
@@ -299,16 +298,21 @@ main {
 @media (width >= 576px) {
   .section__heading .sh__title {
     font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: start;
+    background-position: center left;
   }
 }
 .section__heading a {
   display: block;
-  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: end;
+  text-align: center;
   color: #8FC53C;
   text-decoration: underline;
   font-size: 14px;
@@ -320,6 +324,11 @@ main {
 @media (width >= 576px) {
   .section__heading a {
     font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: end;
   }
 }
 .section__heading a:hover {
@@ -384,6 +393,10 @@ main {
   line-height: 20px;
   letter-spacing: 1.2px;
 }
+.product__card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
 
 .blog__card {
   width: 100%;
@@ -441,6 +454,9 @@ main {
   font-weight: 400;
   line-height: 26px;
   letter-spacing: 0.84px;
+}
+.blog__card:hover {
+  transform: scale(0.98);
 }
 .blog__card:hover .blog__title {
   color: #8FC53C;
@@ -912,7 +928,7 @@ section.products__section {
   margin-bottom: 20px;
   position: relative;
 }
-section.products__section.general {
+section.products__section-general {
   width: 100%;
   padding: 40px 0;
   margin-bottom: 20px;
@@ -921,6 +937,24 @@ section.products__section.general {
 section.blogs__section {
   width: 100%;
   padding: 20px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+section.blogs__section {
+  width: 100%;
+  padding: 20px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+section.blogs__section-general {
+  width: 100%;
+  padding: 40px 0;
+  margin-bottom: 20px;
+  position: relative;
+}
+section.about__section-general {
+  width: 100%;
+  padding: 40px 0;
   margin-bottom: 20px;
   position: relative;
 }
@@ -973,6 +1007,7 @@ section.blogs__section {
   -o-object-fit: contain;
      object-fit: contain;
   border-radius: 10px;
+  transition: all 0.3s;
 }
 @media (width >= 768px) {
   .about__row .about__image.secondary img {
@@ -985,6 +1020,12 @@ section.blogs__section {
 }
 .about__row .about__image.secondary img:nth-child(2) {
   transform: translateY(20px);
+}
+.about__row .about__image.secondary:hover img:nth-child(1) {
+  transform: translateY(20px);
+}
+.about__row .about__image.secondary:hover img:nth-child(2) {
+  transform: translateY(-20px);
 }
 .about__row .about__content {
   width: 100%;
@@ -1043,14 +1084,29 @@ section.blogs__section {
   }
 }
 
+.about__text {
+  margin-top: 30px;
+  width: 100%;
+  text-align: center;
+  color: #303030;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 1.6px;
+}
+
 .products-swiper {
   padding-bottom: 40px;
+}
+.products-swiper .swiper-slide {
+  padding: 5px;
 }
 .products-swiper .swiper-pagination-bullet {
   background-color: #8FC53C;
 }
 
-.products__section.general .ps__inner {
+.products__section-general .ps__inner {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1059,7 +1115,7 @@ section.blogs__section {
   gap: 40px;
 }
 @media (width > 992px) {
-  .products__section.general .ps__inner {
+  .products__section-general .ps__inner {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1067,26 +1123,26 @@ section.blogs__section {
     align-items: stretch;
   }
 }
-.products__section.general .ps__inner .ps__left {
+.products__section-general .ps__inner .ps__left {
   width: 100%;
 }
 @media (width > 992px) {
-  .products__section.general .ps__inner .ps__left {
+  .products__section-general .ps__inner .ps__left {
     max-width: 230px;
   }
 }
-.products__section.general .ps__inner .ps__left .filter__toggle {
+.products__section-general .ps__inner .ps__left .filter__toggle {
   margin-bottom: 20px;
 }
 @media (width >= 992px) {
-  .products__section.general .ps__inner .ps__left .filter__toggle {
+  .products__section-general .ps__inner .ps__left .filter__toggle {
     display: none;
   }
 }
-.products__section.general .ps__inner .ps__right {
+.products__section-general .ps__inner .ps__right {
   width: 100%;
 }
-.products__section.general .ps__inner .product__filters {
+.products__section-general .ps__inner .product__filters {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1096,11 +1152,11 @@ section.blogs__section {
   display: none;
 }
 @media (width >= 992px) {
-  .products__section.general .ps__inner .product__filters {
+  .products__section-general .ps__inner .product__filters {
     display: flex;
   }
 }
-.products__section.general .ps__inner .product__filters .filter__collapse {
+.products__section-general .ps__inner .product__filters .filter__collapse {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1109,7 +1165,7 @@ section.blogs__section {
   border: 1px solid #F4F4F4;
   border-radius: 10px;
 }
-.products__section.general .ps__inner .product__filters .filter__collapse .fc__button {
+.products__section-general .ps__inner .product__filters .filter__collapse .fc__button {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1121,25 +1177,25 @@ section.blogs__section {
   border-radius: 10px;
   cursor: pointer;
 }
-.products__section.general .ps__inner .product__filters .filter__collapse .fc__button span {
+.products__section-general .ps__inner .product__filters .filter__collapse .fc__button span {
   color: #303030;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
 }
-.products__section.general .ps__inner .product__filters .filter__collapse .fc__button button {
+.products__section-general .ps__inner .product__filters .filter__collapse .fc__button button {
   color: #8FC53C;
   transition: all 0.3s;
 }
-.products__section.general .ps__inner .product__filters .filter__collapse.collapsed .fc__button button {
+.products__section-general .ps__inner .product__filters .filter__collapse.collapsed .fc__button button {
   transform: rotate(-180deg);
 }
-.products__section.general .ps__inner .product__filters .fc__content {
+.products__section-general .ps__inner .product__filters .fc__content {
   width: 100%;
   padding: 12px 15px;
 }
-.products__section.general .ps__inner .product__filters .fc__content .fc__checkboxs {
+.products__section-general .ps__inner .product__filters .fc__content .fc__checkboxs {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1147,7 +1203,7 @@ section.blogs__section {
   align-items: center;
   gap: 10px;
 }
-.products__section.general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item {
+.products__section-general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1155,7 +1211,7 @@ section.blogs__section {
   align-items: center;
   gap: 10px;
 }
-.products__section.general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item input {
+.products__section-general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item input {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1168,18 +1224,18 @@ section.blogs__section {
   transition: all 0.3s;
   background-position: top 1px left 1px;
 }
-.products__section.general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item input:checked {
+.products__section-general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item input:checked {
   background-size: 18px;
   background-color: #8FC53C;
 }
-.products__section.general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item label {
+.products__section-general .ps__inner .product__filters .fc__content .fc__checkboxs .check__item label {
   color: #303030;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
-.products__section.general .ps__inner .product__filters .filter__confirm {
+.products__section-general .ps__inner .product__filters .filter__confirm {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -1187,13 +1243,13 @@ section.blogs__section {
   align-items: center;
   gap: 15px;
 }
-.products__section.general .ps__inner .product__filters .filter__confirm button {
+.products__section-general .ps__inner .product__filters .filter__confirm button {
   cursor: pointer;
 }
-.products__section.general .ps__inner .product__filters .filter__confirm .primary__button {
+.products__section-general .ps__inner .product__filters .filter__confirm .primary__button {
   max-width: 120px;
 }
-.products__section.general .ps__inner .products__grid {
+.products__section-general .ps__inner .products__grid {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -1201,12 +1257,12 @@ section.blogs__section {
   place-items: center;
 }
 @media (width >= 576px) {
-  .products__section.general .ps__inner .products__grid {
+  .products__section-general .ps__inner .products__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (width >= 1200px) {
-  .products__section.general .ps__inner .products__grid {
+  .products__section-general .ps__inner .products__grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
@@ -1216,4 +1272,22 @@ section.blogs__section {
 }
 .blogs-swiper .swiper-pagination-bullet {
   background-color: #8FC53C;
+}
+
+.blogs-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  place-items: center;
+  gap: 40px;
+}
+@media (width >= 768px) {
+  .blogs-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 992px) {
+  .blogs-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -12,16 +12,19 @@
         width: 100%;
         max-width: 560px;
         @include row-center;
-        img{
+
+        img {
             width: 100%;
             height: auto;
             max-height: 480px;
             object-fit: contain;
         }
+
         &.secondary {
             @include row-between;
             gap: 15px;
             padding: 20px 0;
+
             img {
                 width: 46%;
                 height: auto;
@@ -29,18 +32,31 @@
                 max-height: 430px;
                 object-fit: contain;
                 border-radius: 10px;
-    
+                transition: all 0.3s;
+
                 @media (width >=768px) {
                     width: 50%;
                     height: 98%;
                 }
-    
+
                 &:nth-child(1) {
                     transform: translateY(-20px);
                 }
-    
+
                 &:nth-child(2) {
                     transform: translateY(20px);
+                }
+            }
+
+            &:hover {
+                img {
+                    &:nth-child(1) {
+                        transform: translateY(20px);
+                    }
+
+                    &:nth-child(2) {
+                        transform: translateY(-20px);
+                    }
                 }
             }
         }
@@ -82,7 +98,7 @@
             letter-spacing: 1.6px;
 
             @media (width >=768px) {
-                font-size: 16px;
+                font-size: $text-size;
             }
         }
 
@@ -94,8 +110,20 @@
             letter-spacing: 1.6px;
 
             @media (width >=768px) {
-                font-size: 16px;
+                font-size: $text-size;
             }
         }
     }
+}
+
+.about__text {
+    margin-top: 30px;
+    width: 100%;
+    text-align: center;
+    color: $text-color;
+    font-size: $text-size;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 1.6px;
 }

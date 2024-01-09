@@ -67,12 +67,11 @@
         @include row-between;
     }
     .sh__title {
-        width: 100%;
         min-height: 120px;
-        @include row-justify-start;
-        text-align: start;
+        @include column-center;
+        text-align: center;
         background-repeat: no-repeat;
-        background-position: center left;
+        background-position: center;
         background-size: contain;
         padding: 10px 15px;
         font-size: 20px;
@@ -82,14 +81,16 @@
         letter-spacing: 2.4px;
         @media (width >= 576px){
             font-size: $title-size;
+            @include row-justify-start;
+            text-align: start;
+            background-position: center left;
         }
     }
 
     a {
         display: block;
-        width: 100%;
-        @include row-justify-end;
-        text-align: end;
+        @include column-center;
+        text-align: center;
         color: $primary-color;
         text-decoration: underline;
         font-size: 14px;
@@ -99,6 +100,8 @@
         letter-spacing: 1.6px;
         @media (width >= 576px){
             font-size: 16px;
+            @include row-justify-end;
+            text-align: end;
         }
 
         &:hover {
@@ -163,6 +166,10 @@
         line-height: 20px;
         letter-spacing: 1.2px;
     }
+    &:hover{
+        transform: scale(1.03);
+        box-shadow: 0 0 10px $black-1;
+    }
 }
 
 .blog__card {
@@ -221,6 +228,7 @@
         letter-spacing: 0.84px;
     }
     &:hover{
+        transform: scale(0.98);
         .blog__title{
             color: $primary-color;
         }

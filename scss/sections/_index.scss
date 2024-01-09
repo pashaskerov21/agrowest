@@ -5,11 +5,20 @@ section{
     &.products__section{
         @include make-section(0,20px,20px);
     }
-    &.products__section.general{
+    &.products__section-general{
         @include make-section(0,40px,20px);
     }
     &.blogs__section{
         @include make-section(0,20px,20px);
+    }
+    &.blogs__section{
+        @include make-section(0,20px,20px);
+    }
+    &.blogs__section-general{
+        @include make-section(0,40px,20px);
+    }
+    &.about__section-general{
+        @include make-section(0,40px,20px);
     }
 }
 @import "about";
