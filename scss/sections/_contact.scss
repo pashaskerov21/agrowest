@@ -38,9 +38,11 @@
             }
         }
     }
-    .primary__button{
-        max-width: 320px;
-        align-self: flex-end;
+    @media (width >= 768px){
+        .primary__button{
+            max-width: 320px;
+            align-self: flex-end;
+        }
     }
 }
 .contact__map{

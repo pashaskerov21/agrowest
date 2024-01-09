@@ -1661,9 +1661,11 @@ footer .footer__bottom a {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.contact__form .primary__button {
-  max-width: 320px;
-  align-self: flex-end;
+@media (width >= 768px) {
+  .contact__form .primary__button {
+    max-width: 320px;
+    align-self: flex-end;
+  }
 }
 
 .contact__map {
