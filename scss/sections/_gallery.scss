@@ -1,0 +1,86 @@
+.gallery__buttons {
+    width: 100%;
+    @include row-center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+
+    .gallery__button {
+        min-width: 160px;
+        min-height: 46px;
+        padding: 15px;
+        border-radius: 10px;
+        @include row-center;
+        color: $text-color;
+        font-size: $text-size;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        cursor: pointer;
+        &.active{
+            background-color: $primary-color;
+            color: #fff;
+            background-image: var(--i);
+            background-position: center right;
+            background-repeat: no-repeat;
+            &:hover{
+                animation: $pulse-primary;
+            }
+        }
+    }
+}
+
+.gallery__tabs{
+    width: 100%;
+    @include column-center;
+    gap: 40px;
+    .gallery__tab{
+        width: 100%;
+        display: none;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        place-items: center;
+        &.active{
+            display: grid;
+        }
+        @media (width >= 576px){
+            grid-template-columns: repeat(2,1fr);
+        }
+        @media (width >= 992px){
+            grid-template-columns: repeat(3,1fr);
+        }
+        .gallery__item{
+            width: 100%;
+            max-width: 420px;
+            position: relative;
+            transition: all 0.3s;
+            .gallery__image{
+                width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+            .hover{
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+                width: 90%;
+                height: 90%;
+                background-color: #F1EEEE59;
+                @include row-center;
+                opacity: 0;
+                transition: all 0.3s;
+                a{
+                    font-size: 50px;
+                    color: #FFFFFFBF;
+                }
+            }
+            &:hover{
+                .hover{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

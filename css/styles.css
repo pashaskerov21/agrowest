@@ -94,7 +94,7 @@ main {
   padding: 20px 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap: 20px;
 }
@@ -1449,4 +1449,105 @@ footer .footer__bottom a {
     font-size: 16px;
     line-height: 30px;
   }
+}
+
+.gallery__buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.gallery__buttons .gallery__button {
+  min-width: 160px;
+  min-height: 46px;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  color: #303030;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.gallery__buttons .gallery__button.active {
+  background-color: #8FC53C;
+  color: #fff;
+  background-image: var(--i);
+  background-position: center right;
+  background-repeat: no-repeat;
+}
+.gallery__buttons .gallery__button.active:hover {
+  animation: pulse-primary 1s ease infinite;
+}
+
+.gallery__tabs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.gallery__tabs .gallery__tab {
+  width: 100%;
+  display: none;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  place-items: center;
+}
+.gallery__tabs .gallery__tab.active {
+  display: grid;
+}
+@media (width >= 576px) {
+  .gallery__tabs .gallery__tab {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (width >= 992px) {
+  .gallery__tabs .gallery__tab {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+.gallery__tabs .gallery__tab .gallery__item {
+  width: 100%;
+  max-width: 420px;
+  position: relative;
+  transition: all 0.3s;
+}
+.gallery__tabs .gallery__tab .gallery__item .gallery__image {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.gallery__tabs .gallery__tab .gallery__item .hover {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background-color: rgba(241, 238, 238, 0.3490196078);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.3s;
+}
+.gallery__tabs .gallery__tab .gallery__item .hover a {
+  font-size: 50px;
+  color: rgba(255, 255, 255, 0.7490196078);
+}
+.gallery__tabs .gallery__tab .gallery__item:hover .hover {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */

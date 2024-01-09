@@ -76,7 +76,7 @@ main{
     width: 100%;
     min-height: 60vh;
     padding: 20px 0;
-    @include column-center;
+    @include column-justify-start;
     gap: 20px;
     @media (width >= 1200px){
         background: var(--d-1) no-repeat top 100px right, var(--d-2) no-repeat bottom 100px left;
