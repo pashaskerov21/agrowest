@@ -1,0 +1,10 @@
+.condition__content{
+    width: 100%;
+    @include column-align-start;
+    gap: 30px;
+    text-align: start;
+    position: relative;
+    color: $text-color;
+    line-height: 30px;
+    font-style: normal;
+}
