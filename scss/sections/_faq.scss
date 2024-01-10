@@ -1,0 +1,98 @@
+.faq__wrapper {
+    width: 100%;
+    @include column-center;
+    gap: 40px;
+
+    .faq__collapse {
+        width: 100%;
+        @include column-center;
+        border: 1px solid #EAEAEA;
+        border-radius: 10px;
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+
+        &__button {
+            background-color: #F1F1F1;
+            width: 100%;
+            min-height: 120px;
+            padding: 20px;
+            @include row-between;
+            gap: 30px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+
+            @media (width >=992px) {
+                padding: 20px 50px;
+            }
+
+            .fqb__title {
+                color: $text-color;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 30px;
+
+                @media (width >=768px) {
+                    font-size: 22px;
+                }
+            }
+
+            .fqb__button {
+                min-width: 46px;
+                min-height: 46px;
+                max-width: 46px;
+                max-height: 46px;
+                background-color: #D9D9D9;
+                @include row-center;
+                cursor: pointer;
+                border-radius: 10px;
+                -webkit-border-radius: 10px;
+                -moz-border-radius: 10px;
+                -ms-border-radius: 10px;
+                -o-border-radius: 10px;
+
+                i {
+                    transition: all 0.3s;
+                    -webkit-transition: all 0.3s;
+                    -moz-transition: all 0.3s;
+                    -ms-transition: all 0.3s;
+                    -o-transition: all 0.3s;
+                }
+                &.active{
+                    i {
+                        transform: rotate(-180deg);
+                        -webkit-transform: rotate(-180deg);
+                        -moz-transform: rotate(-180deg);
+                        -ms-transform: rotate(-180deg);
+                        -o-transform: rotate(-180deg);
+                    }
+                }
+            }
+        }
+
+        &__content {
+            width: 100%;
+            padding: 20px;
+            display: none;
+
+            @media (width >=992px) {
+                padding: 20px 50px;
+            }
+
+            .faq__text {
+                width: 100%;
+                color: $text-color;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 33px;
+            }
+        }
+    }
+
+}

@@ -35,5 +35,13 @@ document.addEventListener('DOMContentLoaded', function () {
             $('.gallery__tab').removeClass('active');
             $(`.gallery__tab[data-id="${id}"]`).addClass('active')
         });
+
+        $('.faq__collapse').eq(0).find('.fqb__button').addClass('active');
+        $('.faq__collapse').eq(0).find('.faq__collapse__content').slideToggle();
+
+        $('.faq__collapse .fqb__button').click(function(){
+            $(this).toggleClass('active');
+            $(this).closest('.faq__collapse').find('.faq__collapse__content').slideToggle();
+        });
     });
 });
