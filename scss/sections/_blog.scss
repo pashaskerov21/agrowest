@@ -1,22 +1,105 @@
-.blogs-swiper{
+.blogs-swiper {
     padding-bottom: 40px;
-    .swiper-pagination{
-        &-bullet{
+
+    .swiper-pagination {
+        &-bullet {
             background-color: $primary-color;
         }
     }
 }
 
-.blogs-wrapper{
+.blogs-wrapper {
     width: 100%;
     display: grid;
     grid-template-columns: 1fr;
     place-items: center;
     gap: 40px;
-    @media (width >= 768px){
-        grid-template-columns: repeat(2,1fr);
+
+    @media (width >=768px) {
+        grid-template-columns: repeat(2, 1fr);
     }
-    @media (width >= 992px){
-        grid-template-columns: repeat(3,1fr);
+
+    @media (width >=992px) {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.blog__detail__wrapper {
+    width: 100%;
+    @include column-center;
+    gap: 30px;
+
+    .blog__detail__image {
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 520px;
+            object-fit: contain;
+        }
+    }
+
+    .blog__detail__content {
+        width: 100%;
+        @include column-align-start;
+        gap: 30px;
+
+        .blog__title {
+            color: $text-color;
+            font-size: $title-size;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1.44px;
+        }
+
+        .blog__text {
+            color: $text-color;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px;
+        }
+    }
+
+    .blog__detail_bottom {
+        width: 100%;
+        @include column-align-start;
+        gap: 30px;
+        @media (width >= 768px){
+            @include row-between;
+        }
+        .bdb__left{
+            @include row-justify-start;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .bdb__right{
+            @include row-justify-start;
+            flex-wrap: wrap;
+            gap: 15px;
+            @media (width >= 768px){
+                justify-content: flex-end;
+            }
+        }
+        .blog__date,
+        .blog__view__count {
+            @include row-justify-start;
+            gap: 10px;
+            i {
+                color: $primary-color;
+                font-size: 18px;
+            }
+
+            span {
+                display: block;
+                color: #848484;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: normal;
+            }
+        }
     }
 }

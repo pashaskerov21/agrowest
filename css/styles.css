@@ -1501,6 +1501,107 @@ footer .footer__bottom a {
   }
 }
 
+.blog__detail__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+.blog__detail__wrapper .blog__detail__image {
+  width: 100%;
+}
+.blog__detail__wrapper .blog__detail__image img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.blog__detail__wrapper .blog__detail__content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+.blog__detail__wrapper .blog__detail__content .blog__title {
+  color: #303030;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.44px;
+}
+.blog__detail__wrapper .blog__detail__content .blog__text {
+  color: #303030;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+}
+.blog__detail__wrapper .blog__detail_bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media (width >= 768px) {
+  .blog__detail__wrapper .blog__detail_bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.blog__detail__wrapper .blog__detail_bottom .bdb__left {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+.blog__detail__wrapper .blog__detail_bottom .bdb__right {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+@media (width >= 768px) {
+  .blog__detail__wrapper .blog__detail_bottom .bdb__right {
+    justify-content: flex-end;
+  }
+}
+.blog__detail__wrapper .blog__detail_bottom .blog__date,
+.blog__detail__wrapper .blog__detail_bottom .blog__view__count {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+.blog__detail__wrapper .blog__detail_bottom .blog__date i,
+.blog__detail__wrapper .blog__detail_bottom .blog__view__count i {
+  color: #8FC53C;
+  font-size: 18px;
+}
+.blog__detail__wrapper .blog__detail_bottom .blog__date span,
+.blog__detail__wrapper .blog__detail_bottom .blog__view__count span {
+  display: block;
+  color: #848484;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .mission__content {
   width: 100%;
   display: flex;
